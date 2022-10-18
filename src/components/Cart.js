@@ -1,10 +1,13 @@
-import { React, useState } from 'react'
+import { React, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import '../styles/Cart.css'
 
 export default function Cart({ cart, updateCart }) {
   const [isOpen, setIsOpen] = useState(true)
   const total = cart.reduce((acc, plantType) => acc + plantType.amount * plantType.price, 0)
+  useEffect(() => {
+    document.title = `LMJ: ${total}€ d'achats`
+  }, [total])
   return isOpen
     ? (
       <div className='lmj-cart'>
