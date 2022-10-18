@@ -19,6 +19,9 @@ function indication(careType, scaleValue) {
     case 3:
       value = 'beaucoup'
       break
+    default:
+      value = ''
+      break
   }
   return `Cette plante requiert ${value} de ${type}`
 }
