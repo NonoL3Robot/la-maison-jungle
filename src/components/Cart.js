@@ -37,6 +37,6 @@ export default function Cart({ cart, updateCart }) {
       )
 }
 Cart.propTypes = {
-  cart: PropTypes.any.isRequired,
+  cart: PropTypes.array.isRequired,
   updateCart: PropTypes.func.isRequired
 }
